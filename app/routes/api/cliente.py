@@ -1,6 +1,6 @@
 from flask_restx import Resource
 from app.routes.api import api
-from app.extensions.apitoken import token_required, auth
+from app.extensions import token_required, auth
 from app.models import Cliente
 
 
