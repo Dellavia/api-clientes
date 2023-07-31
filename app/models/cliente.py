@@ -1,7 +1,8 @@
 from app.extensions import db
+from app.models.base_model import BaseModel
 
 
-class Cliente(db.Model):
+class Cliente(BaseModel):
     id = db.Column(db.String(14), primary_key=True)
     nome = db.Column(db.String(100))
     email = db.Column(db.String(100))
@@ -17,19 +18,3 @@ class Cliente(db.Model):
 
     def __repr__(self):
         return f'<User "{self.id}">'
-
-    def to_dict(self):
-        dict = {
-            "id": self.id,
-            "nome": self.nome,
-            "email": self.email,
-            "telefone": self.telefone,
-            "endereco": self.endereco,
-            "bairro": self.bairro,
-            "cidade": self.cidade,
-            "estado": self.estado,
-            "cep": self.cep,
-            "sexo": self.sexo,
-            "ult_compra": self.ult_compra
-            }
-        return dict
