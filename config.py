@@ -1,7 +1,7 @@
-# import os
+import os
 
 
 class Config:
-    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI')
-    SQLALCHEMY_DATABASE_URI = 'mssql+pymssql://dellavia_api:powerapp@10.200.186.27/PowerApp'
+    API_KEY = os.environ.get('DV_APIKEY')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = False

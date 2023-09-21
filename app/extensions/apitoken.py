@@ -1,6 +1,6 @@
 from flask import request
 from functools import wraps
-
+from config import Config
 
 auth = {
     'apikey': {
@@ -22,7 +22,7 @@ def token_required(f):
         if not token:
             return {'message' : 'Token is missing'}, 401
 
-        if token != 'a10b20c30':
+        if token != Config.API_KEY:
             return {'message': 'Invalid Token'}, 401
 
         return f(*args, **kwargs)
