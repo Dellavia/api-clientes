@@ -4,7 +4,7 @@ from app.extensions import token_required, auth
 from app.models import Cliente
 
 
-ns = api.namespace('cliente', description='Informações de clientes', authorizations=auth)
+ns = api.namespace('Cliente', description='Informações de clientes', authorizations=auth)
 
 
 @ns.route('/<string:cnpj_cpf>')
