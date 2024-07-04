@@ -19,4 +19,4 @@ class Cliente(BaseModel):
 
 
     def __repr__(self):
-        return f'<User "{self.id}">'
+        return f'<Cliente "{self.id}">'
