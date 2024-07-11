@@ -4,7 +4,7 @@ from app.extensions import token_required, auth
 from app.models import Orcamento
 
 
-ns = api.namespace('Orcamento', description='Valida existencia de orçamento no Call Center', authorizations=auth)
+ns = api.namespace('orcamento', description='Valida existencia de orçamento no Call Center', authorizations=auth)
 
 
 @ns.route('/<string:emissao>/<string:num_orc>')
