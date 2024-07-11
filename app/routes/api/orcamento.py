@@ -15,7 +15,7 @@ class OrcamentoRes(Resource):
     @token_required
     def get(self, emissao, num_orc):
         '''Busca orçamento pela data e numero'''
-        orcamento = Orcamento.query.filter_by(id=num_orc, emissao=emissao).first()
+        orcamento = Orcamento.query.filter_by(id=num_orc).filter(Orcamento.emissao >= emissao).first()
         code = 200
 
         if orcamento:
