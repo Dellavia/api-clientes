@@ -9,3 +9,4 @@ api = Api(bp,
 
 import app.routes.api.cliente
 import app.routes.api.orcamento
+import app.routes.api.pesquisa
