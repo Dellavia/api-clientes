@@ -12,4 +12,4 @@ class Orcamento(BaseModel):
     areaneg = db.Column(db.String(1))
 
     def __repr__(self):
-        return f'<Orcamento "{self.id}">'
+        return f'<Orcamento num "{self.id}">'
