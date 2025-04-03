@@ -9,6 +9,7 @@ class Orcamento(BaseModel):
     loja = db.Column(db.String(2))
     dtemisnf = db.Column(db.String(8))
     vlrbruto = db.Column(db.Float)
+    areaneg = db.Column(db.String(1))
 
     def __repr__(self):
         return f'<Orcamento "{self.id}">'
